@@ -11,6 +11,10 @@
 <body>
     <h1><%= header %></h1>
     <p>Today <%= new java.util.Date() %></p>
-<h2>New title</h2>
+    <form action="auth.jsp" method="post">
+        <input type="text" id="login" placeholder="Введите логин" />
+        <input type="text" id="password" placeholder="Введите пароль" />
+        <input type="submit">
+    </form>
 </body>
 </html>
