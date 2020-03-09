@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=utf-8" %>
+<%
+    String header = "Apache Tomcat";
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,8 @@
     <title>Регистрация</title>
 </head>
 <body>
-Hello, World!
+    <h1><%= header %></h1>
+    <p>Today <%= new java.util.Date() %></p>
+<h2>New title</h2>
 </body>
 </html>
