@@ -7,14 +7,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Регистрация</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <h1><%= header %></h1>
     <p>Today <%= new java.util.Date() %></p>
-    <form action="auth.jsp" method="post">
-        <input type="text" id="login" placeholder="Введите логин" />
-        <input type="text" id="password" placeholder="Введите пароль" />
-        <input type="submit">
-    </form>
+    <jsp:include page="auth.jsp" />
 </body>
 </html>

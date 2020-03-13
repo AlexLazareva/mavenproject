@@ -1,16 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Alex_Lazareva
-  Date: 09.03.2020
-  Time: 22:50
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<form class="auth" action="#" method="post">
+    <input type="text" id="login" class="auth__field" placeholder="Login" />
+    <input type="password" id="password" class="auth__field" placeholder="Password" />
+    <input type="submit" class="btn btn-lg btn-primary" />
+</form>
 
-</body>
-</html>
