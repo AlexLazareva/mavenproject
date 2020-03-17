@@ -1,7 +1,4 @@
 <%@ page contentType="text/html;charset=utf-8" %>
-<%
-    String header = "Apache Tomcat";
-%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +7,6 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <h1><%= header %></h1>
-    <p>Today <%= new java.util.Date() %></p>
     <jsp:include page="auth.jsp" />
 </body>
 </html>
