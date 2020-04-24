@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <jsp:include page="auth.jsp" />
+    <jsp:include page="views/auth/auth.jsp" />
 </body>
 </html>
