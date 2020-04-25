@@ -1,1 +1,3 @@
-servlets\IndexServlet.class
+ru\itparkkazan\servlets\AuthServlet.class
+ru\itparkkazan\services\DataSourceServices.class
+ru\itparkkazan\dao\DAO.class
