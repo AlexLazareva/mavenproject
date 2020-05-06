@@ -4,17 +4,17 @@ public enum DbProperty {
     /**
      * Драйвер БД
      */
-    DRIVER_NAME_PROPERTY_NAME("driver_name");
+    DRIVER_NAME_PROPERTY_NAME("driver_name"),
 
     /**
      * Адрес БД
      */
-    URL_PROPERTY_NAME("url");
+    URL_PROPERTY_NAME("url"),
 
     /**
      * Пользователь для подключения
      */
-    USER_PROPERTY_NAME("user");
+    USER_PROPERTY_NAME("user"),
 
     /**
      * Пользователь для подключения
