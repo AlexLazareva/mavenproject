@@ -12,6 +12,8 @@ C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\services\DataS
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\exeptions\PropertyReaderException.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\beans\PaySystemCore.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\dao\ClientDAO.java
+C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\utils\ServletUtil.java
+C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\enums\ClientCredential.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\beans\Client.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\servlets\AuthServlet.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\servlets\IndexServlet.java

@@ -7,7 +7,6 @@ import ru.itparkkazan.enums.ClientCredential;
 import ru.itparkkazan.exeptions.DataSourceServiceException;
 import ru.itparkkazan.exeptions.UnregistredClientException;
 import ru.itparkkazan.services.DataSourceService;
-import ru.itparkkazan.utils.ClientCredentialsInfo;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -44,7 +43,6 @@ public class ClientDAO implements DAO<Client> {
         }
     }
 
-
     public Client get(String lgn, String psswd) throws UnregistredClientException {
         try (PreparedStatement preparedStatement = dataSourceService.getPreparedStatement(SELECT_CLIENT_BY_LGN_AND_PSSWD)) {
             preparedStatement.setString(1, lgn);
@@ -56,6 +54,7 @@ public class ClientDAO implements DAO<Client> {
                 String firstName = resultSet.getString(ClientCredential.FIRST_NAME.getClientCredential());
                 String secondName = resultSet.getString(ClientCredential.SECOND_NAME.getClientCredential());
                 String surname = resultSet.getString(ClientCredential.SURNAME.getClientCredential());
+                int accountId = resultSet.getInt(ClientCredential.ACCOUNT_ID.getClientCredential());
                 return new Client(id, lgn, psswd, firstName, secondName, surname);
             } else {
                 throw new UnregistredClientException("Клиент с логином " + lgn + " отсутствует");

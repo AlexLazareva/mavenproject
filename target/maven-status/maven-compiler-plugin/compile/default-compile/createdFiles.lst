@@ -4,6 +4,7 @@ ru\itparkkazan\exeptions\UnregistredClientException.class
 ru\itparkkazan\exeptions\DataSourceServiceException.class
 ru\itparkkazan\services\ReadPropertiesService.class
 ru\itparkkazan\beans\Person.class
+ru\itparkkazan\enums\ClientCredential.class
 ru\itparkkazan\beans\Account$AccountBuilder.class
 ru\itparkkazan\beans\PaySystemCore.class
 ru\itparkkazan\beans\Client.class
@@ -13,6 +14,7 @@ ru\itparkkazan\dao\DAO.class
 ru\itparkkazan\exeptions\PropertyReaderException.class
 ru\itparkkazan\exeptions\ReplenishException.class
 ru\itparkkazan\servlets\IndexServlet.class
+ru\itparkkazan\utils\ServletUtil.class
 ru\itparkkazan\enums\DbProperty.class
 ru\itparkkazan\services\DataSourceService.class
 ru\itparkkazan\utils\ClientCredentialsInfo.class
