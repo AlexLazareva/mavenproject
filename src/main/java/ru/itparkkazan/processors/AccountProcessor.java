@@ -27,8 +27,6 @@ public class AccountProcessor {
         прокинуть исключение WriteOffException с соответствующим описанием.
         Написать тест.
          */
-        System.out.println(account);
-        System.out.println(writeOffSum);
     }
 
     public static void transferMoney(Account fromAccount, Account toAccount, int sum) {
