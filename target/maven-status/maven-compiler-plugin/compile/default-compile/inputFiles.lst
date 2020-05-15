@@ -5,7 +5,9 @@ C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\enums\Page.jav
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\enums\DbProperty.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\exeptions\DataSourceServiceException.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\utils\SessionUtil.java
+C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\exeptions\UnregistredAccountException.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\dao\DAO.java
+C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\processors\AccountProcessor.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\services\ReadPropertiesService.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\exeptions\UnregistredClientException.java
 C:\Users\User\Documents\mavenproject\src\main\java\ru\itparkkazan\services\DataSourceService.java

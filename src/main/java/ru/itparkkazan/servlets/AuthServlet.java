@@ -5,6 +5,7 @@ import ru.itparkkazan.beans.Client;
 import ru.itparkkazan.dao.ClientDAO;
 import ru.itparkkazan.enums.ClientCredential;
 import ru.itparkkazan.enums.Page;
+import ru.itparkkazan.exeptions.UnregistredAccountException;
 import ru.itparkkazan.exeptions.UnregistredClientException;
 import ru.itparkkazan.utils.ServletUtil;
 import ru.itparkkazan.utils.SessionUtil;
