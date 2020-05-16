@@ -10,10 +10,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Account {
+    private int id;
     private int accountNumber;
     private int sum;
     private Person client;
     Boolean isBlocked;
+
+    public Account(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
 
     /**
      * Переопределенный метод вывода класса счета в строку
