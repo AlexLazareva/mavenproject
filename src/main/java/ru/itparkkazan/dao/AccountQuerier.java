@@ -9,7 +9,7 @@ public class AccountQuerier {
     /**
      * SQL-запрос для получения из БД информации о всех счетах
      */
-    protected static final String SELECT_ALL_ACCOUNT_BY_NUMBERS = "SELECT * FROM PAYSYSTEM.PAYSYSTEM.ACCOUNT";
+    protected static final String SELECT_ALL_ACCOUNT_NUMBERS = "SELECT * FROM PAYSYSTEM.PAYSYSTEM.ACCOUNT";
 
     /**
      * SQL-запрос для получения из БД информации о счете по его номеру

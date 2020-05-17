@@ -1,7 +1,5 @@
 package ru.itparkkazan.beans;
 
-import java.util.List;
-
 public interface Person {
     /**
      * Метод для получения полного имени
