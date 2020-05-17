@@ -2,10 +2,11 @@ package ru.itparkkazan.enums;
 
 public enum Page {
     INDEX_PAGE("index.jsp"),
-    REG_PAGE("/views/registration.jsp"),
-    AUTH_PAGE("/views/auth.jsp"),
+    REG_PAGE("/auth/registration.jsp"),
+    AUTH_PAGE("/auth/auth.jsp"),
     ERROR_PAGE("/views/error.jsp"),
-    SUCCESS_PAGE("/views/successRegClient.jsp");
+    SUCCESS_REG_PAGE("/views/successRegClient.jsp"),
+    SUCCESS_AUTH_PAGE("/views/successAuthClient.jsp");
 
     private final String page;
 

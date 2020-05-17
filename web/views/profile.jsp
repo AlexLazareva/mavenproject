@@ -4,6 +4,12 @@
     <title>Профиль пользователя</title>
 </head>
 <body>
-
+Профиль пользователя
+<div>
+    <span>"${sessionScope.login}"</span>
+    <span>"${sessionScope.firstname}"</span>
+    <span>"${sessionScope.secondname}"</span>
+    <span>"${sessionScope.surname}"</span>
+</div>
 </body>
 </html>

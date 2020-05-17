@@ -39,6 +39,6 @@ public class AuthServlet extends HttpServlet {
         }
         HttpSession httpSession = httpServletRequest.getSession();
         SessionUtil.fillSession(httpSession, client);
-        ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_PAGE.getPage());
+        ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_AUTH_PAGE.getPage());
     }
 }

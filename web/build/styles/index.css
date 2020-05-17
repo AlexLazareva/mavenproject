@@ -22,10 +22,14 @@ body {
   border-radius: 8px;
   margin: 0 auto;
   padding: 20px 33px; }
-
-.auth__field {
-  display: block;
-  padding: 8px 30px 12px 20px;
-  margin-bottom: 20px; }
+  .auth__field {
+    display: block;
+    padding: 8px 30px 12px 20px;
+    margin-bottom: 20px; }
+  .auth__logo {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 20px 0 35px; }
 
 /*# sourceMappingURL=index.css.map */

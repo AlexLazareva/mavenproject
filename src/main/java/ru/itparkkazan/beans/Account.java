@@ -13,11 +13,14 @@ public class Account {
     private int id;
     private int accountNumber;
     private int sum;
-    private Person client;
-    Boolean isBlocked;
 
     public Account(int accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    public boolean equals(Object object) {
+        Account account = (Account) object;
+        return this.accountNumber == account.getAccountNumber();
     }
 
     /**

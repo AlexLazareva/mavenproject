@@ -68,6 +68,6 @@ public class RegClientServlet extends HttpServlet {
             e.printStackTrace();
         }
         SessionUtil.fillSession(httpSession, client);
-        ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_PAGE.getPage());
+        ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_REG_PAGE.getPage());
     }
 }
