@@ -14,5 +14,5 @@ public interface Person {
      * Сеттер счетов
      * @param account
      */
-    void setAccounts(List<Account> personAccounts);
+    void setAccounts(Account account);
 }

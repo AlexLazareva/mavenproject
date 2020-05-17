@@ -1,9 +1,15 @@
 package ru.itparkkazan.beans;
 
-import java.util.List;
-
 public class Client implements Person {
-
+    /**
+     * Конструктор
+     *
+     * @param login      логин
+     * @param psswd      пароль
+     * @param firstname  имя
+     * @param secondname отчество
+     * @param surname    фамилия
+     */
     public Client(String login, String psswd, String firstname, String secondname, String surname) {
         this.login = login;
         this.psswd = psswd;
@@ -12,6 +18,15 @@ public class Client implements Person {
         this.surname = surname;
     }
 
+    /**
+     * Конструктор
+     * @param id идентификатор
+     * @param login логин
+     * @param psswd пароль
+     * @param firstname имя
+     * @param secondname отчество
+     * @param surname фамилия
+     */
     public Client(int id, String login, String psswd, String firstname, String secondname, String surname) {
         this.id = id;
         this.login = login;
@@ -32,7 +47,16 @@ public class Client implements Person {
     private String firstname;
     private String secondname;
     private String surname;
-    private List<Account> clientAccounts;
+    private Account account;
+
+    public Client(int id, String login, String firstname, String secondname, String surname, Account account) {
+        this.id = id;
+        this.login = login;
+        this.firstname = firstname;
+        this.secondname = secondname;
+        this.surname = surname;
+        this.account = account;
+    }
 
     public int getId() {
         return id;
@@ -87,12 +111,11 @@ public class Client implements Person {
         return String.join(" ", surname, firstname, secondname);
     }
 
-    @Override
-    public void setAccounts(List<Account> personAccounts) {
-        this.clientAccounts = personAccounts;
+    public void setAccounts(Account account) {
+        this.account = account;
     }
 
-    public List<Account> getClientAccounts() {
-        return clientAccounts;
+    public Account getClientAccounts() {
+        return account;
     }
 }
