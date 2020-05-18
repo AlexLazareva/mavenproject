@@ -36,6 +36,16 @@ public class Client implements Person {
         this.surname = surname;
     }
 
+    public Client(int id, String login, String psswd, String firstname, String secondName, String surname, Account account) {
+        this.id = id;
+        this.login = login;
+        this.psswd = psswd;
+        this.firstname = firstname;
+        this.secondname = secondName;
+        this.surname = surname;
+        this.account = account;
+    }
+
     /**
      * Конструктор по-умолчанию
      */
@@ -57,6 +67,8 @@ public class Client implements Person {
         this.surname = surname;
         this.account = account;
     }
+
+
 
     public int getId() {
         return id;

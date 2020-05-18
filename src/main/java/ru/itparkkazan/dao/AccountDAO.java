@@ -104,6 +104,7 @@ public class AccountDAO implements DAO<Account> {
         }
     }
 
+    @Override
     public List<Account> getAll() {
         try (PreparedStatement preparedStatement = dataSourceService.getPreparedStatement(AccountQuerier.SELECT_ALL_ACCOUNT_NUMBERS)) {
             List<Account> allAccountNumbers = new LinkedList<>();
