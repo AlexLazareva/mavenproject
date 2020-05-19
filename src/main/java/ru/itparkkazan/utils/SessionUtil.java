@@ -3,6 +3,7 @@ package ru.itparkkazan.utils;
 import ru.itparkkazan.beans.Account;
 import ru.itparkkazan.beans.Client;
 import ru.itparkkazan.dao.AccountDAO;
+import ru.itparkkazan.enums.AccountInfo;
 import ru.itparkkazan.enums.ClientCredential;
 import ru.itparkkazan.exeptions.UnregistredAccountException;
 
@@ -14,27 +15,29 @@ import java.util.Map;
 public class SessionUtil {
     public static Map<String, String> readClientCredentials(HttpServletRequest httpServletRequest) {
         Map<String, String> result  = new HashMap<>();
-        String clientFirstName = httpServletRequest.getParameter(ClientCredentialsInfo.FIRST_NAME);
-        String clientSecondName = httpServletRequest.getParameter(ClientCredentialsInfo.SECOND_NAME);
-        String clientSurname = httpServletRequest.getParameter(ClientCredentialsInfo.SURNAME);
-        String clientLogin = httpServletRequest.getParameter(ClientCredentialsInfo.LOGIN);
-        String clientPsswd = httpServletRequest.getParameter(ClientCredentialsInfo.PSSWD);
+        String clientFirstName = httpServletRequest.getParameter(ClientCredential.FIRST_NAME.getClientCredential());
+        String clientSecondName = httpServletRequest.getParameter(ClientCredential.SECOND_NAME.getClientCredential());
+        String clientSurname = httpServletRequest.getParameter(ClientCredential.SURNAME.getClientCredential());
+        String clientLogin = httpServletRequest.getParameter(ClientCredential.LOGIN.getClientCredential());
+        String clientPsswd = httpServletRequest.getParameter(ClientCredential.PSSWD.getClientCredential());
 
-        result.put(ClientCredentialsInfo.FIRST_NAME, clientFirstName);
-        result.put(ClientCredentialsInfo.SECOND_NAME, clientSecondName);
-        result.put(ClientCredentialsInfo.SURNAME, clientSurname);
-        result.put(ClientCredentialsInfo.LOGIN, clientLogin);
-        result.put(ClientCredentialsInfo.PSSWD, clientPsswd);
+        result.put(ClientCredential.FIRST_NAME.getClientCredential(), clientFirstName);
+        result.put(ClientCredential.SECOND_NAME.getClientCredential(), clientSecondName);
+        result.put(ClientCredential.SURNAME.getClientCredential(), clientSurname);
+        result.put(ClientCredential.LOGIN.getClientCredential(), clientLogin);
+        result.put(ClientCredential.PSSWD.getClientCredential(), clientPsswd);
 
         return result;
     }
 
     public static void fillSession(HttpSession httpSession, Client client) {
-        httpSession.setAttribute(ClientCredentialsInfo.FIRST_NAME, client.getFirstname());
-        httpSession.setAttribute(ClientCredentialsInfo.SECOND_NAME, client.getSecondname());
-        httpSession.setAttribute(ClientCredentialsInfo.SURNAME, client.getSurname());
-        httpSession.setAttribute(ClientCredentialsInfo.LOGIN, client.getLogin());
-        httpSession.setAttribute(ClientCredentialsInfo.PSSWD, client.getPsswd());
+        httpSession.setAttribute(ClientCredential.ID.getClientCredential(), client.getId());
+        httpSession.setAttribute(ClientCredential.FIRST_NAME.getClientCredential(), client.getFirstname());
+        httpSession.setAttribute(ClientCredential.SECOND_NAME.getClientCredential(), client.getSecondname());
+        httpSession.setAttribute(ClientCredential.SURNAME.getClientCredential(), client.getSurname());
+        httpSession.setAttribute(ClientCredential.LOGIN.getClientCredential(), client.getLogin());
+        httpSession.setAttribute(ClientCredential.PSSWD.getClientCredential(), client.getPsswd());
+        httpSession.setAttribute(ClientCredential.ACCOUNT_ID.getClientCredential(), client.getClientAccounts().getId());
         httpSession.setMaxInactiveInterval(300);
     }
 

@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Успешная регистрация</title>
+    <title>Успешный вход</title>
 </head>
 <body>
-<h1>Успешная регистрация</h1>
+<h1>Успешный вход</h1>
 </body>
 </html>

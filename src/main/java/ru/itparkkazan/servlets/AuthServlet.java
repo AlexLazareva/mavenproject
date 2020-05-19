@@ -32,9 +32,9 @@ public class AuthServlet extends HttpServlet {
         try {
             client = clientDAO.get(clientLogin, clientPsswd);
             if (client == null) {
-                //TODO Вывести предупреждение "Проблемы с БД, обратитесь к администратору"
+                log.error("Клиент " + clientLogin + " не найден в БД, обратитесь к администратору");
             }
-        } catch (UnregistredClientException e) {
+        } catch (UnregistredClientException | UnregistredAccountException e) {
             log.error(e.getMessage());
         }
         HttpSession httpSession = httpServletRequest.getSession();
