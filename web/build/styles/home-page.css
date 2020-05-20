@@ -1,0 +1,16 @@
+.page__home {
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  background: url("../../images/background.jpg") 100% 100% no-repeat;
+  background-size: auto; }
+  .page__home-wrapper {
+    padding: 15px; }
+  .page__home-title {
+    font-size: 3.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem; }
+
+/*# sourceMappingURL=home-page.css.map */

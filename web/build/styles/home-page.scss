@@ -9,5 +9,15 @@
 
     background: url("../../images/background.jpg") 100% 100% no-repeat;
     background-size: auto;
+
+    &-wrapper {
+      padding: 15px;
+    }
+
+    &-title {
+      font-size: 3.6rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
   }
 }

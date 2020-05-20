@@ -2,9 +2,12 @@
 <html>
 <head>
     <title>Успешный вход</title>
+    <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/build/styles/index.css" />
+    <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/build/vendor/bootstrap.css" />
 </head>
 <body>
-<div>
+<div class="page">
+    <jsp:include page="partials/menu.jsp" />
     <div>
         <div class="topnav">
             <a href="pay.jsp" target="payOperationFrame">Оплата</a>
