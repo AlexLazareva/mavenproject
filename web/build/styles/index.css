@@ -8,6 +8,13 @@ body {
   flex: 1 0 auto;
   background: #eee !important; }
 
+form {
+  margin: 0; }
+
+main {
+  display: flex !important;
+  flex: 1 0 auto; }
+
 .container-page {
   display: flex;
   flex-flow: row nowrap;
@@ -31,5 +38,19 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     padding: 20px 0 35px; }
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 2px solid #e2e6ea;
+  padding: 10px 15px 20px; }
+
+.page {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 0 auto; }
+
+.profile-btn {
+  margin-right: 10px; }
 
 /*# sourceMappingURL=index.css.map */

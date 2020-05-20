@@ -6,7 +6,7 @@ public enum Page {
     AUTH_PAGE("/auth/auth.jsp"),
     ERROR_PAGE("/views/error.jsp"),
     SUCCESS_REG_PAGE("/views/successRegClient.jsp"),
-    SUCCESS_AUTH_PAGE("/views/successAuthClient.jsp"),
+    SUCCESS_AUTH_PAGE("/views/home.jsp"),
     PROFILE_PAGE("/views/profile.jsp");
 
     private final String page;

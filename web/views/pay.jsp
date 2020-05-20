@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Аутентификация</title>
+    <title>Оплата</title>
 </head>
 <body>
-Успешная авторизация
+Оплата
 </body>
 </html>

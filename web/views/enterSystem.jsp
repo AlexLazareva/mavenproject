@@ -4,6 +4,16 @@
     <title>Успешный вход</title>
 </head>
 <body>
-<h1>Успешный вход</h1>
+<div>
+    <div>
+        <div class="topnav">
+            <a href="pay.jsp" target="payOperationFrame">Оплата</a>
+            <a href="../initClientsTransfer" target="payOperationFrame">Перевод</a>
+            <a href="withdrawal.jsp" target="payOperationFrame">Вывод</a>
+            <a href="replenish.jsp" target="payOperationFrame">Пополнение</a>
+        </div>
+        <iframe frameborder="0" name="payOperationFrame" width="100%" height="200px"/>
+    </div>
+</div>
 </body>
 </html>
