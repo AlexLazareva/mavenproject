@@ -43,6 +43,7 @@ public class PaySystemCore {
         for (Map.Entry<Client, List<Account>> entry : paySystemClientAccounts.entrySet()) {
             Client client = entry.getKey();
             System.out.println(client.getFullName());
+            System.out.println(client.getClientAccounts());
 //            for (Account account : client.getClientAccounts()) {
 //                System.out.println(String.join("", " ", account.toString()));
 //            }
