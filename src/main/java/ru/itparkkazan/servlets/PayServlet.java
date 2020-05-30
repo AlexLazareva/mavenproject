@@ -32,9 +32,9 @@ public class PayServlet extends HttpServlet {
         PayDataDAO payDataDAO = new PayDataDAO();
         try {
             Client payClient = SessionUtil.getClientFromSession(httpServletRequest.getSession());
-            AccountProcessor.withdrawalAccount(payClient.getClientAccounts(), Integer.parseInt(paySum));
+            AccountProcessor.withdrawalAccount(payClient.getAccount(), Integer.parseInt(paySum));
             AccountDAO accountDAO = new AccountDAO();
-            accountDAO.update(payClient.getClientAccounts());
+            accountDAO.update(payClient.getAccount());
             PayData payData = new PayData(payClient, payTargetCount, Integer.parseInt(paySum), new Date());
             payDataDAO.insert(payData);
         } catch (Exception e) {

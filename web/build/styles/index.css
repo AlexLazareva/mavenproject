@@ -49,8 +49,13 @@ main {
   display: flex;
   flex-flow: column nowrap;
   flex: 1 0 auto; }
+  .page__wrapper {
+    height: 100%; }
 
 .profile-btn {
   margin-right: 10px; }
+
+.main-row {
+  height: 100%; }
 
 /*# sourceMappingURL=index.css.map */

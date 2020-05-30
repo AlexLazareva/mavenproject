@@ -9,8 +9,8 @@
 <body>
 <div class="container-fluid container-page">
     <form class="auth form-signin" action="${pageContext.servletContext.contextPath}/auth" method="post">
-        <input type="text" id="login" name="login" class="auth__field" placeholder="Login" />
-        <input type="password" id="password" name="psswd" class="auth__field" placeholder="Password" />
+        <input type="text" id="login" name="login" class="auth__field" placeholder="Логин" />
+        <input type="password" id="password" name="psswd" class="auth__field" placeholder="Пароль" />
         <button type="submit" class="btn btn-lg btn-primary">Войти</button>
     </form>
 </div>

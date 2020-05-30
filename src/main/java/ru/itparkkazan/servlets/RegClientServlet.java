@@ -35,21 +35,11 @@ public class RegClientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
         Map<String, String> clientCredentials = SessionUtil.readClientCredentials(httpServletRequest);
+        AccountDAO accountDAO = new AccountDAO();
 
-        if (isLoginAlreadyExist(clientCredentials.get(ClientCredential.LOGIN.getClientCredential()))) {
-           try {
-            httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + Page.REG_PAGE.getPage() + "?message=" + URLEncoder.encode("Пользователь с таким логином уже есть", "UTF-8"));
-           } catch (UnsupportedEncodingException e) {
-               log.error("Ошибка при декодировании текста для страницы " + Page.REG_PAGE.getPage(), e);
-           } catch (IOException e) {
-               e.printStackTrace();
-           }
-        } else {
-            AccountDAO accountDAO = new AccountDAO();
-
-            List<Account> allAccountNumbers = accountDAO.getAll();
-            int accountNumber;
-            Account currentAccount;
+        List<Account> allAccountNumbers = accountDAO.getAll();
+        int accountNumber;
+        Account currentAccount;
 
             do {
                 accountNumber = ThreadLocalRandom.current().nextInt(10000, 99999);
@@ -76,19 +66,13 @@ public class RegClientServlet extends HttpServlet {
             clientDAO.insert(client);
 
             HttpSession httpSession = httpServletRequest.getSession();
-            try {
-                client = clientDAO.get(ClientCredential.LOGIN.getClientCredential(), ClientCredential.PSSWD.getClientCredential());
-            } catch (UnregistredClientException | UnregistredAccountException e) {
-                log.error("Ошибка при получении пользователя " + ClientCredential.LOGIN.getClientCredential(), e);
-            }
+//            try {
+//                client = clientDAO.get(ClientCredential.LOGIN.getClientCredential(),
+//                        ClientCredential.PSSWD.getClientCredential());
+//            } catch (UnregistredAccountException | UnregistredClientException e) {
+//                log.error("Ошибка при регистрации пользователя " + ClientCredential.LOGIN.getClientCredential(), e);
+//            }
             SessionUtil.fillSession(httpSession, client);
             ServletUtil.redirectInsideServlet(httpServletRequest, httpServletResponse, Page.SUCCESS_REG_PAGE.getPage());
-        }
-    }
-
-    private boolean isLoginAlreadyExist(String login) {
-        ClientDAO clientDAO = new ClientDAO();
-        List<Client> allClients = clientDAO.getAll();
-        return allClients.stream().map(Client::getLogin).anyMatch(x -> x.equalsIgnoreCase(login));
     }
 }

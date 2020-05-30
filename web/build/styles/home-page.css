@@ -12,5 +12,17 @@
     font-size: 3.6rem;
     font-weight: 600;
     margin-bottom: 2rem; }
+.page__form {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 0 auto;
+  padding: 20px 33px; }
+  .page__form-field {
+    display: block;
+    padding: 8px 30px 12px 20px;
+    margin-bottom: 20px; }
 
 /*# sourceMappingURL=home-page.css.map */

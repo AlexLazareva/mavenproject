@@ -127,7 +127,11 @@ public class Client implements Person {
         this.account = account;
     }
 
-    public Account getClientAccounts() {
+    public Account getAccount() {
         return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }

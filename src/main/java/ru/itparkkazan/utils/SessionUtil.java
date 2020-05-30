@@ -37,7 +37,9 @@ public class SessionUtil {
         httpSession.setAttribute(ClientCredential.SURNAME.getClientCredential(), client.getSurname());
         httpSession.setAttribute(ClientCredential.LOGIN.getClientCredential(), client.getLogin());
         httpSession.setAttribute(ClientCredential.PSSWD.getClientCredential(), client.getPsswd());
-        httpSession.setAttribute(ClientCredential.ACCOUNT_ID.getClientCredential(), client.getClientAccounts().getId());
+        httpSession.setAttribute(ClientCredential.ACCOUNT_ID.getClientCredential(), client.getAccount().getId());
+        httpSession.setAttribute(AccountInfo.ACCOUNT_NUMBER.getAccountInfo(), client.getAccount().getAccountNumber());
+        httpSession.setAttribute(AccountInfo.SUM.getAccountInfo(), client.getAccount().getSum());
         httpSession.setMaxInactiveInterval(300);
     }
 
